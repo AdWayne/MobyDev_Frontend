@@ -1,0 +1,512 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+    html,body{
+    background-color: rgb(25,25,25);
+    scroll-behavior: smooth;
+}
+
+/* начало */
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #118DA8;
+    transition: 0.3s;
+}
+header{
+    padding: 40px 50px 30px 50px;
+    color: white;
+    position: sticky;
+    top: 0;
+    background-color: rgb(25,25,25);
+    z-index: 1000;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 160px;
+    height: 33px;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    height: 27px;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400px;
+    font-size: 17px;
+    font-family: 'Dm Sans ', sans-serif;
+}
+.menu a:hover{
+    color: #118DA8;
+    transition: 0.3s;
+}
+.icons{
+    width: 32px;
+    height: 32px;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+.image{
+    width: 650px;
+    height: 873.44px;
+}
+.underimg{
+    display: flex;
+    width: 27%;
+    margin-top: -75px;
+}
+.content{
+    max-width: 500px;
+    margin-right: 50px;
+}
+.content h2{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 88px;
+    color: white;
+    margin-bottom: 80px;
+    margin-top: 220px;
+}
+.content h2 span{
+    font-weight: 400;
+    font-size: 70px;
+}
+.content p{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* епизоды */
+
+.episode {
+    flex-direction: column;
+    gap: 30px;      
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 90px;
+    width: 100%;
+    max-width: 1450px;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 99%;
+    max-width: 2100px;
+    flex-direction: row;
+}
+
+.episode h2 {
+    padding: 0 50px;
+    margin-left: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    color: white;
+    line-height: 72.2px;
+}
+
+.Knopka {
+    width: 178px;
+    height: 51px;
+    background-color: #118DA8;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-family: 'DM Sans' 'Regular' sans-serif;
+    line-height: 27px;
+    font-weight: 400;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.Knopka:hover {
+    background-color: #0d7287;
+}
+
+/* карты для епизодов */
+.cards-article {
+    position: static;
+    width: 100%;
+    max-width: 1455px;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  gap: 50px; 
+}
+
+.boxcard {
+  background-color: #000;
+  border-radius: 24px;
+  overflow: hidden;
+  max-width: 1400px;
+  display: flex;
+  margin-left: 75px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.cardimg img {
+  width: 500px;
+  height: auto;
+  border-radius: 0;
+  object-fit: cover;
+  display: block;
+  padding: 50px;
+}
+
+.cardtext {
+  padding: 60px 100px 20px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gear {
+  width: auto;
+  height: 27px;
+  background-color: #1A1A1A;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 17px;
+  cursor: default;
+  align-self: flex-start;
+  font-weight: 400;
+}
+
+.cardtext h3 {
+  color: #118DA8;
+  font-size: 18px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.cardtext h1 {
+  font-weight: 400;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.cardtext p {
+  font-weight: 400;
+  font-size: 22px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #aaa;
+  margin-bottom: 35px;
+  width: 750px;
+  
+}
+.Knopkacard1{
+  background-color: #118DA8;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  margin-top: 31px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.Knopkacard {
+  background-color: #118DA8;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  margin-top: -3px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.Knopkacard:hover {
+  background-color: #0d7287;
+}
+
+
+
+/* Про Jacob негра */
+.About {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1450px;
+ margin: 200px 70px 100px 70px;
+ gap: 50px;
+}
+
+.Jacob {
+  max-width: 650px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.about-text {
+  max-width: 600px;
+  color: white;
+}
+.square{
+  margin-left: 40px;
+  display: flex;             
+  justify-content: center;    
+  align-items: center;     
+  background-color: rgb(17, 141, 168);
+  border-radius: 50%;
+  width: 112px;
+  height: 112px;
+  color: white;             
+  font-size: 40px; 
+}
+.about-text p{
+    padding-left: 40px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #aaa;
+}
+.about-text h1{
+    font-weight: 400;
+    font-size: 65px;
+    margin-left: 40px;
+}
+
+
+/* Форма */
+.from {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 587px;
+}
+
+.formbox {
+  background-color: #000;
+  border-radius: 32px;
+  margin: 0 70px;
+  padding: 50px;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+}
+
+.formtext {
+  color: white;
+  max-width: 600px;
+}
+.formtext h1{
+    font-size: 72px;
+    font-weight: 400;
+    width: 431px;
+    padding-right: 50px;
+}
+
+.formtext h3{
+    color: #118DA8;
+  font-size: 18px;
+}
+
+.formimg {
+  position: relative;
+  top: 80px;
+  width: 180px;
+  right: 90px;
+}
+
+.forminputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+  margin-top: -50px;
+}
+
+.forminputs input {
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  height: 82px;
+  width: 522px;
+  margin-left: -130px;
+  background-color: #191919;
+}
+
+.forminputs button {
+  background-color: #118DA8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  height: 48hx;
+  width: 87px;
+  margin-left: -130px;
+  margin-top: 10px;
+}
+
+.forminputs button:hover {
+  background-color: #0d7287;
+}
+
+/* отзывы */
+.otziv{
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+.otzivi{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:30px;
+    max-width: 1500px;
+}
+.cardotziv {
+    background-color: #000;
+    border-radius: 32px;
+    padding: 30px;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    width: 432px;
+    height: 321px;
+}
+.stars{
+    color: #FCFF51;
+    width: 18px;
+    height: 17px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+.cardotziv h2{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43.2px;
+    margin-bottom: 20px;
+}
+.author{
+    color: #b3b3b3;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+
+/* футтер */
+footer {
+  margin-top: 150px;
+  padding: 90px;
+  display: flex;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  color: white;
+  background-color: #191919;
+}
+
+.soni {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.logofoot img {
+  width: 224px;
+  height: auto;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.links img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.Nav, .right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Nav h3, .right h3 {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  margin: 0;
+}
+
+.Ystal {
+  display: flex;
+  gap: 100px;
+}
+
+.linkmusic {
+  display: flex;
+  gap: 15px;
+}
+
+.linkmusic img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+

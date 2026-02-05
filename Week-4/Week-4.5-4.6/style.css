@@ -1,0 +1,360 @@
+body{
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0;
+  background-color: #EEF0F3;
+}
+header{
+    background-color: white;
+    margin-bottom: 22px; 
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.5px solid #EEF0F3;
+}
+.headerblock{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+.nav a{
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #242424;
+}
+.nav a.active{
+  color: #5C53E9;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.btnlogo{
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.Emblem{
+    height: 40px;
+    width: 40px;
+    color: #F0F0F0;
+}
+.Sign{
+    background-color: #5C53E9;
+    color: #FFFFFF;
+}
+.Reglog{
+    background-color: black;
+    color: white;
+    width: 121px;
+    display: flex;
+    justify-content: center;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    border: 1px solid #DFDFDF;
+    padding: 10px 14px;
+    border-radius: 10px;
+    gap: 5px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.left{
+    display: flex;
+    gap: 120px;
+}
+.se{
+    width: 352px;
+}
+.black{
+    background-color: #111928;
+    color: white;
+}
+.navi a{
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #ffffff;
+}
+.search-boxi {
+  display: flex;
+  align-items: center;
+  border: 1px solid #D6D8DE;
+  padding: 10px 14px;
+  border-radius: 10px;
+  gap: 10px;
+  width: 500px;
+}
+
+.search-boxi input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  flex: 1;
+}
+
+.search-boxi img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+}
+section{
+    background-color: #242424;
+}
+
+/* следущая домашка */
+
+
+.card{
+    position: relative;
+    top: 20px;
+    margin: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 53px;
+    padding: 40px;
+    border-radius: 32px;
+    margin-top: 100px;
+}
+
+
+.gear{
+    background-color: #191919;
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+    width: fit-content;
+    padding: 0 16px;
+    border-radius: 6px;
+    margin-bottom: 48.44px;
+}
+.episode{
+    color: #118DA8;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 17px;
+    margin-bottom: 17px;
+}
+
+.title{
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78.4px;
+    color: white;
+    margin-bottom: 28px;
+}
+.text{
+    color: #FFFFFFB2;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    margin-bottom: 16px;
+}
+.btn{
+    background-color: #118DA8;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 15px 12px 20px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.card2{
+    margin: 50px;
+    padding: 20px 20px 30px 20px;
+    background-color: #E1EDE6;
+    width: fit-content;
+}
+
+.author{
+    color: #86928B;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.name{
+    color: #2C2D35;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 100%;
+    margin-bottom: 8px;
+}
+
+.materials{
+    color: #2C2D35;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    margin-bottom: 30px;
+}
+.price{
+    color: #598D66;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+.btn1{
+    border: 1px solid #598D66;
+    color: #598D66;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    padding: 21px 75px;
+    cursor: pointer;
+}
+
+
+/* card 2 */
+.ostalnie{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.card3{
+    border-radius: 10px;
+    margin: 50px;
+    background-color: #F2F6FA;
+    width: 380px;
+}
+.namecup{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 143%;
+    width: 300px;
+    height: 35px;
+    padding: 20px 44px 0px 44px;
+    color: #2E363E;
+}
+.description{
+    padding: 20px 41px;
+    width: 250px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #2E363E;
+}
+.price1{
+    padding-left: 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    color: #434B53;
+    margin-bottom: 15px;
+}
+.btn2{
+    background-color: #FED84C;
+    color: black;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 40px;
+    border: none;
+    width: 163px;
+    height: 68px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 152%;
+    cursor: pointer;
+}
+
+/* card 3 */
+.card4 {
+    width:330px;
+    height:400px;
+    padding:24px;
+    border-radius:16px;
+    background:#11121f;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    color:#fff;
+    margin-top:50px;
+}
+.menu-dots {
+    position:absolute;
+    top:16px;
+    right:16px;
+    display:flex;
+    gap:6px;
+    align-items:center;
+}
+.dot {
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#4a6fa5;
+  }
+.profile-pic {
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#0b1424;
+}
+.about-me {
+    margin-top:10px;
+    font-size:22px;
+    font-weight:600;
+    color:#ffffff;
+  }
+.subtitle {
+    display:flex;
+    gap:14px;
+    align-items:center;
+    flex-wrap:wrap;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #809FB8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.lorem {
+    margin-top:6px;
+    color:#8aa8c6;
+    font-size:14px;
+    line-height:21px;
+    max-width:91%;
+    font-size: 16px;
+    font-weight: 600;
+}
+/* час 5;46 и я закончил  НАКОНЕЦТО*/

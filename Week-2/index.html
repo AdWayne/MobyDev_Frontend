@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Неделя 2</title>
+    <style> /* Тут я через Internal стили */
+.Barbie {
+    color: pink;
+    font-size: 20px;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+}    
+.Oppen {
+    color: rgb(177, 45, 45);
+    font-size: 20px;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;}
+    </style>
+    <link rel="stylesheet" href="style.css"> <!-- Тут я через External стили -->
+</head>                <!-- -->
+<body>
+    <form action="/submit" method="post" class="imgmobydev">  <!-- form=Форма method=post это для чтобы мы смогли написать внутри-->
+        <fieldset> <!-- Квадратик,оболчка для формы -->
+            <legend> Маленькая регистрация</legend> <!--Надпись для квадратика -->
+        <label for="name">Логин:</label> <!-- текстовое описание -->
+        <input type="text" id="login" name="login" required> <!-- Поле ввода текста с id для будущее получение информаций для js name=название, required=это обязательно-->
+        <br><br> <!-- это типо отступа -->
+        <label for="email">Email:</label>
+        <input type="email" id="adres" name="adres" required> <!-- type=email это для проверки на почту -->
+        <br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="pass" name="password" required> <!-- type=password это для пароль -->
+        <br><br>
+        <label for="Sms">Напишите о чем то:</label><br>
+        <textarea name="text" id="message" placeholder="Расскажите о себе немного" required></textarea><br> <!-- textarea это для многострочного текста placeholder=это подсказка,скрывать текста-->
+        <select name="country" id="country" required> <!-- select это выпадающий список -->
+            <option value="">Выберите страну</option> <!-- option это варианты для выбора -->
+            <option value="kz">KZ</option>
+            <option value="us">US</option>
+            <option value="ru">RU</option>
+        </select><br><br>
+        <label for="Sex">Ваш пол:
+        <input type="radio" id="man" name="пол" value="Мужской"> Мужской <!-- type=radio это для выбора одного из нескольких вариантов -->
+        <input type="radio" id="woman" name="пол" value="Женский"> Женский
+        </label><br><br>
+        <label for="Условий"><a href="https://drive.google.com/file/d/1SbPQlG4-U_Dbxr__eo0dZ7Yj5R0cYMPW/view">Согласны с условиями:</a>
+            <input type="checkbox" id="check" name="check"> Нет <!-- type=checkbox это для выбора нескольких вариантов -->
+            <input type="checkbox" id="check" name="check" required> Да
+            <input type="checkbox" id="check" name="check"> Подумаю <br>
+        </label><br>
+        <button id="Registration" name="vxod" type="submit">Тіркелу</button> <!-- type=button это для кнопки -->
+        <button id="Reset" name="reset" type="reset" >Өшіру</button> <!-- забыл указать type=reset прощу прощение куратор Таяна и в registration тоже добавил type=sumbit-->
+    </fieldset>
+    </form>
+    <h1 style="width: 50px; color: rgb(97, 83, 83);">CSS</h1> <!-- тут я через inline стиль -->
+    <h2 id="uwu">Изучение</h2>
+    <p>Что я изучил</p>
+    <p class="Barbie">Barbie</p> <img class="barbiephoto" src="https://studyfinds.org/wp-content/uploads/2023/08/shutterstock_2334764113-1200x751.jpg" alt="Barbie">
+    <p style="text-align: center; color: black;">or</p> 
+    <p class="Oppen">Oppenheimer</p> <img class="Oppenheimerphoto" src="https://www.gardenofmemory.net/content/images/2023/07/oppenheimer-header.jpg" alt="Photo Oppenheimer">
+    <ul class="list">
+        <li>Стилизацию</li>
+        <li>Игра с  цветами</li>
+        <li>Дизайн и площадь</li>
+    </ul>
+<div>
+    <h1>Свойство в CSS</h1>
+    <p class="box1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam unde repellat in delectus commodi deleniti illo, consectetur maiores, eius magni aut sequi ad sunt sapiente dolorem, facere minus sed accusantium.</p>
+</div>
+<div>
+    <p class="box2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut itaque quibusdam voluptates amet similique velit, commodi expedita illo fuga nisi veritatis fugit modi necessitatibus voluptate non eaque, quos eligendi. Voluptatum?</p>
+</div>
+<div>
+    <p class="box3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut itaque quibusdam voluptates amet similique velit, commodi expedita illo fuga nisi veritatis fugit modi necessitatibus voluptate non eaque, quos eligendi. Voluptatum?</p>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,142 @@
+.container{
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.s{
+    width: 100px;
+    height: 100px;
+    margin-left: 8.5%;
+    color: #fbfbfb;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ff0000;
+}
+.b{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.c{
+    text-align: center;
+    width: 100px;
+    height: 120px;
+    margin-left: 45%;
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 12);
+}
+.d{
+    margin-left: 80%;
+    text-align: center;
+    height: 20vh;
+    width: 10rem;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(1, 122, 1, 0.9);
+    color: #00fff2;
+}
+.qw{
+    background-color: #00fff2;
+}
+.qe{
+    background-color: #ff00f7;
+}
+.qr{
+    background-color: #ff0000;
+}
+.Img{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: 50%;
+    background-color: rgb(196, 192, 192,0.5);
+}
+.bloshni{
+    display: block;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.ip{
+    display: inline;
+    background-color: rgba(0, 255, 0, 0.5);
+}
+.container2{
+    display: block;
+    padding: 20px;
+    background-color: #ccc;
+    width: 400px;
+}
+.container2 p,
+.container2 img,
+.container2 a {
+    display: block;      
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+}
+.a {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+.a:hover {
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+}
+.a:active {
+    background-color: #ff0202;
+    color: white;
+}
+.input:focus {
+    background-color: #000000;
+    color: white;
+}
+.list-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+.list-container ul {
+    list-style-type: square;
+    padding-left: 20px;
+}   
+.list:first-child {
+    color: red;
+}
+.list:last-child{
+    color: blue;
+}
+.list-unikue:hover{
+    color: green;
+    cursor: pointer;
+}
+.block {
+    border: 2px solid #333;
+    padding: 15px;
+    margin: 15px;
+    background-color: #f0f0f0;
+    width: 250px;
+}
+.block p:first-child:hover {
+    color: white;
+    background-color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+}
+.block input:last-child:focus {
+    outline: none;
+    border: 2px solid red;
+    background-color: #ffe0e0;
+}

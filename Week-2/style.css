@@ -1,0 +1,57 @@
+.html,body{ /* Селекторы по классу */
+    font-family: Arial, sans-serif; /* Шрифты семейство */
+    background-color: #f4f4f4; /* Цвет фона */
+    scroll-behavior: smooth; /* Плавный скролл */
+}
+.imgmobydev{ /* Селекторы по классу */
+    background-image: url('https://framerusercontent.com/assets/26DC5eBT2VuMorzdfIYmuySOn8.png'); /*Ссылка для заднего фото */
+    background-size: cover; /* Покрытие всего фона */
+    background-position: center; /* Центрирование */
+    background-repeat: no-repeat; /* Без повторения */
+    height: 50vh; /* Высота на весь экран */
+    padding: 25px; /* Внутренний отступ */
+}
+
+ p{ /*Селекторы по элементу */
+    color: blue; /* Синий цвет текста */
+}
+.list{
+    list-style-type: square; /* Квадратные маркеры */
+    font-size: large; /* Крупный шрифт */
+    font-weight: bold ; /* Жирные шрифты */
+}
+#uwu{ /* Селекторы по id */
+    color: red; 
+    font-size: 20px;
+    font-weight: bold; /* Жирные шрифты */
+    background-color: yellow; /* Желтый фон */
+    text-align: center; /* Центрирование текста */
+}
+img { /*Селекторы по элементу */
+    display: block; /* Блочный элемент */
+    margin-left: auto; /* Автоматические отступы слева */
+    margin-right: auto; /* Тут справа */
+    height: 100px; /* Высота */
+    width: 150px; /* Ширина */
+}
+.box1{
+    border: 2px solid red; /* Красная рамка */
+    padding: 10px; /* Внутренний отступ */
+    margin: 10px; /* Внешний отступ */
+    background-color: lightgray; /* Светло-серый фон */
+    overflow: auto; /* Автоматическая полоса прокрутки */
+}
+.box2{
+    border: 2px dashed green; /* Жасыл пунктирная рамка */
+    padding: 10px; /* Внутренний отступ */
+    margin: 10px; /* Внешний отступ */
+    background-color: lightyellow; /* Светло-желтый фон */
+    overflow: scroll; /* Полоса прокрутки */
+}
+.box3{
+    border: 2px dotted blue; /* Синяя точечная рамка */
+    padding: 10px; /* Внутренний отступ */
+    margin: 10px; /* Внешний отступ */
+    background-color: rgb(0, 255, 255); /* Бюризовый фон */
+    overflow: hidden; /* Курсор скрытый */
+}
