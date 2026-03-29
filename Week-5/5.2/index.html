@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/Frame 85.svg" alt="Logo">
+        </div>
+        <nav>
+            <a href="">Репродукции</a>
+            <a href="">Новинки</a>
+            <a href="">О нас</a>
+            <img src="img/Frame 217.svg" alt="">
+        </nav>
+    </header>
+
+    <div class="mobile_header_menu">
+    <div class="logo_mobile">
+        <img src="img/Frame 85.svg" alt="">
+    </div>
+
+    <div class="nav_mobile">
+        <img src="img/List.svg" alt="" onclick="openMenu()">  
+        <img src="img/Frame 217.svg" alt="">
+    </div>
+    </div>
+
+    <div class="mobile-menu" id="menu">
+    <button class="close" onclick="closeMenu()">✕</button>
+
+    <nav class="menu-links">
+        <a href="#">Репродукции</a>
+        <a href="#">Новинки</a>
+        <a href="#">О нас</a>
+    </nav>
+    </div>
+
+    <section class="hero">
+        <div>
+            <img src="img/Layer 0 1.svg" class="bird" alt="bird">
+        </div>
+        <div class="Models">
+            <div class="flextext">
+            <p class="bigtext">Реплики картин от
+            <span class="green">Ink. House</span>
+            </p>
+            </div>
+            <p class="whitegreentext">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
+            <button class="button_product">
+                Продукция
+            </button>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="country">
+            <p class="country_p">Репродукции</p>
+            <div class="country-btn">
+                <button class="tab">Франция</button>
+                <button class="tab">Германия</button>
+                <button class="tab">Англия</button>
+            </div>
+        </div><br>
+
+        <article id="catalog">
+            <div class="card_art">
+                <img src="img/5.svg" alt="">
+                    <p class="author">Марсель Руссо</p>
+                    <p class="name">Охота Амура</p>
+                    <p class="zat">Холст, масло (50х80) </p>
+                    <p class="price">14 500 руб</p>
+                    <button class="button_product_art">В корзину</button>
+            </div>
+            <div class="card_art">
+                <img src="img/03.svg" alt="">
+                    <p class="author">Анри Селин</p>
+                    <p class="name">Дама с собачкой</p>
+                    <p class="zat">Акрил, бумага (50х80) </p>
+                    <p class="price">16 500 руб</p>
+                    <button class="button_product_art">В корзину</button>
+            </div>
+            <div class="card_art">
+                <img src="img/4.svg" alt="">
+                    <p class="author">Франсуа Дюпон</p>
+                    <p class="name">Процедура</p>
+                    <p class="zat">Цветная литография (40х60) </p>
+                    <p class="price">20 000 руб</p>
+                    <button class="button_product_art">В корзину</button>
+            </div>
+            <div class="card_art">
+                <img src="img/03 (1).svg" alt="">
+                    <p class="author">Луи Детуш</p>
+                    <p class="name">Роза</p>
+                    <p class="zat">Бумага, акрил (50х80) </p>
+                    <p class="price">12 000 руб</p>
+                    <button class="button_product_art">В корзину</button>
+            </div>
+            <div class="card_art">
+                <img src="img/03 (2).svg" alt="">
+                    <p class="author">Франсуа Дюпон</p>
+                    <p class="name">Птичья трапеза</p>
+                    <p class="zat">Цветная литография (40х60) </p>
+                    <p class="price">22 500 руб</p>
+                    <button class="button_product_art">В корзину</button>
+            </div>
+            <div class="card_art">
+                <img src="img/03 (3).svg" alt="">
+                    <p class="author">Пьер Моранж</p>
+                    <p class="name">Пейзаж с рыбой</p>
+                    <p class="zat">Цветная литография (40х60) </p>
+                    <p class="price">20 000 руб</p>
+                    <button class="button_product_art">В корзину</button>
+            </div>
+        </article>
+    </section><br><br>
+
+    <section class="banner">
+    <img src="img/Rectangle.svg" alt="" class="banner-bg">
+
+    <div class="banner-content">
+        <div class="banner-flex">
+        <div class="banner-star"><img src="img/Star 2.svg" alt=""></div>
+
+        <h1 class="banner-title">
+            Новая коллекция <br> французских авторов
+        </h1>
+        </div>
+
+        <p class="banner-text">
+            Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым
+            свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих
+            собственных рациональных ограничений.
+        </p>
+
+        <p class="banner-text">
+            Принимая во внимание показатели успешности, граница обучения кадров
+            предопределяет высокую востребованность направлений прогрессивного развития.
+        </p>
+
+        <a href="#catalog" class="banner-btn">Ознакомиться</a>
+    </div>
+</section>
+
+
+<section class="support">
+    <div><img src="img/Group 210.svg" alt=""></div>
+    <div class="info">
+        <p class="big-text">Наша команда</p>
+        <p class="little-text">Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.</p>
+        <div class="flex-row">
+        <div><img src="img/Ellipse 30.svg" alt=""></div>
+        <div><img src="img/Ellipse 31.svg" alt=""></div>
+        <div><img src="img/Ellipse 32.svg" alt=""></div>
+    </div>
+    </div>
+</section>
+
+<footer>
+    <div class="left">
+    <img src="img/Frame 85 (1).svg" style="width: 143px;height: 35px;" alt="">
+    <div class="column">
+        <p class="footer-blacktext">+7 (999) 543-54-54</p>
+        <p class="footer-graytext">Мастерская</p>
+    </div>
+    </div>
+    <div class="center">
+        <div class="centerdiv">
+            <p class="footer-blacktext">Репродукции</p>
+            <p class="footer-graytext">Франция</p>
+            <p class="footer-graytext">Германия</p>
+            <p class="footer-graytext">Англия</p>
+        </div>
+        <div class="centerdiv">
+            <p class="footer-blacktext">Новинки</p>
+            <p class="footer-graytext">2021</p>
+            <p class="footer-graytext">2020</p>
+        </div>
+        <div class="centerdiv">
+            <p class="footer-blacktext">О нас</p>
+            <p class="footer-graytext">Художники</p>
+            <p class="footer-graytext">Менеджеры</p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="gapdiv">
+            <img src="img/Frame.svg" alt=""><img src="img/Frame (1).svg" alt=""><img src="img/Frame (2).svg" alt="">
+        </div>
+        <div class="centerdiv">
+            <p class="ai">Ink. House ®</p>
+            <p class="ai">All rights reserved</p>
+        </div>
+    </div>
+</footer>
+
+<div class="footer-card-mobile">
+    <div class="logo">
+        <img src="img/Frame 85 (1).svg" alt="">
+    </div>
+
+    <div class="top">
+        <div>
+            <p class="phone">+7 (999) 543-54-54</p>
+            <p class="muted">Мастерская</p>
+        </div>
+
+        <div>
+            <p>Репродукции</p>
+            <p class="muted">Франция</p>
+            <p class="muted">Германия</p>
+            <p class="muted">Англия</p>
+        </div>
+    </div>
+
+    <div class="middle">
+        <div>
+            <p>Новинки</p>
+            <p class="muted">2021</p>
+            <p class="muted">2020</p>
+        </div>
+
+        <div>
+            <p>О нас</p>
+            <p class="muted">Художники</p>
+            <p class="muted">Менеджеры</p>
+        </div>
+    </div>
+    <hr>
+    <div class="social">
+        <img src="img/Frame.svg" alt=""><img src="img/Frame (1).svg" alt=""><img src="img/Frame (2).svg" alt="">
+    </div>
+
+    <div class="copyright">
+        Ink. House ® All rights reserved
+    </div>
+</div>
+
+<div class="footer-tablet">
+    <div class="footer_top">
+        <div class="footer_logo">
+            <img src="img/Frame 85.svg">
+        </div>
+
+        <div class="footer_contacts">
+            <a>+7 (999) 543-54-54</a>
+            <p>Мастерская</p>
+        </div>
+    </div>
+
+    <div class="footer_menu">
+        <div class="footer_col">
+            <p>Репродукции</p>
+            <a>Франция</a>
+            <a>Германия</a>
+            <a>Англия</a>
+        </div>
+
+        <div class="footer_col">
+            <p>Новинки</p>
+            <a>2021</a>
+            <a>2020</a>
+        </div>
+
+        <div class="footer_col">
+            <p>О нас</p>
+            <a>Художники</a>
+            <a>Менеджеры</a>
+        </div>
+        <div class="footer_col_right">
+            <div class="links">
+            <img src="img/Frame.svg" alt=""><img src="img/Frame (1).svg" alt=""><img src="img/Frame (2).svg" alt="">
+            </div>
+            <p>Ink. House ®</p>
+            <p>All rights reserved</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openMenu() {
+    document.getElementById("menu").classList.add("active");
+}
+
+function closeMenu() {
+    document.getElementById("menu").classList.remove("active");
+}
+</script>
+</body>
+</html>
