@@ -1,0 +1,63 @@
+@import url(button.css);
+@import url(header.css);
+@import url(user.css);
+@import url(news.css);
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0 56px;
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+.create-news-btn {
+  position: fixed;
+  right: 80px;
+  bottom: 60px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background: #3cb371;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+button:hover{
+    cursor: pointer;
+}
+.create-news-btn:hover {
+  background: #2e8b57;
+}
+.header-user__container{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.header-user {
+  display: flex;
+  align-items: center;
+  gap:24px;
+}
+
+.header-user__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #c00;
+}
+
+.header-user__name {
+  font-size: 14px;
+  color: #555;
+}

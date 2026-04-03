@@ -1,0 +1,22 @@
+button{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.button--blue{
+    background-color: rgba(0, 119, 182, 1);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 24px;
+    text-decoration: none;
+}
+.button--red{
+    background-color: rgba(193, 18, 31, 1);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 8px 16px;
+    text-decoration: none;
+}

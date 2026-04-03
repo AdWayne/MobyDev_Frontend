@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header class="header">
+    <div class="header__left">
+      <a href="./index.html" class="header__logo">
+        <img src="./img/logo.svg" alt="Логотип" />
+      </a>
+
+      <nav class="header__nav">
+        <ol class="header__nav-list">
+          <li>
+            <a
+              href="./index.html"
+              class="header__nav-link header__nav-link--active"
+              aria-current="page"
+            >
+              Новости
+            </a>
+          </li>
+
+          <li>
+            <a href="./categories.html" class="header__nav-link"> Категории </a>
+          </li>
+        </ol>
+      </nav>
+      </div>
+
+      <div class="header__auth">
+        <a href="./login.html" class="button button--blue">Войти</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-card__image">
+            <img
+              src="https://tengrinews.kz/userdata/news/2024/news_551682/thumb_b/photo_490428.jpeg.webp"
+              alt="Пенсионные отчисления казахстанцев"
+            />
+          </div>
+
+          <div class="news-card__content">
+            <a class="news-card__link" href="./news.html?id=1">
+              <h2 class="news-card__title">
+                Пенсионные отчисления казахстанцев: Минтруда упразднит один из
+                видов госуслуг
+              </h2>
+
+              <p class="news-card__attributes">21.10.2024 г. • Спорт</p>
+            </a>
+
+            <div class="news-card__author">
+              <div class="user">
+                <div class="user__avatar">
+                  <img 
+                    src="https://i.pravatar.cc/150?u=admin@admin.com"
+                    alt="Аватар"
+                  />
+                </div>
+
+                <p class="user__name">Администратор</p>
+              </div>
+            </div>
+
+            <div class="news-card__actions">
+              <a
+                href="./edit-news.html?id=1"
+                class="button button--blue button--small"
+              >
+                Редактировать
+              </a>
+
+              <button
+                type="button"
+                class="button button--red button--small"
+                onclick="deleteNews(1)"
+              >
+                Удалить
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card__image">
+            <img
+              src="https://tengrinews.kz/userdata/news/2024/news_551682/thumb_b/photo_490428.jpeg.webp"
+              alt="Пенсионные отчисления казахстанцев"
+            />
+          </div>
+
+          <div class="news-card__content">
+            <a class="news-card__link" href="./news.html?id=1">
+              <h2 class="news-card__title">
+                Пенсионные отчисления казахстанцев: 
+                Минтруда упразднит один из видов госуслуг
+              </h2>
+
+              <p class="news-card__attributes">21.10.2024 г. • Спорт</p>
+            </a>
+
+            <div class="news-card__author">
+              <div class="user">
+                <div class="user__avatar">
+                  <img
+                    src="https://i.pravatar.cc/150?u=admin@admin.com"
+                    alt="Аватар"
+                  />
+                </div>
+
+                <p class="user__name">Администратор</p>
+              </div>
+            </div>
+
+            <div class="news-card__actions">
+              <a
+                href="./edit-news.html?id=1"
+                class="button button--blue button--small"
+              >
+                Редактировать
+              </a>
+
+              <button
+                type="button"
+                class="button button--red button--small"
+                onclick="deleteNews(1)"
+              >
+                Удалить
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <script src="script/index.js"></script>
+  </body>
+</html>

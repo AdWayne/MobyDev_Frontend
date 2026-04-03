@@ -1,0 +1,81 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1000px;
+  gap: 24px;
+}
+.news-title {
+  font-size: 32px;
+  font-weight: Bold;
+  line-height: 125%;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.box p {
+  align-items: center;
+  display: flex;
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: auto;
+  border: 1px solid rgba(230, 230, 230, 1);
+  color: rgba(61, 61, 61, 1);
+  font-size: 16px;
+  font-weight: Semi Bold;
+  line-height: 150%;
+  font-weight: 600;
+}
+.news-author {
+  display: flex;
+  gap: 12px;
+}
+.news-image {
+  border-radius: 24px;
+}
+.news-content {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: rgba(61, 61, 61, 1);
+}
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(240, 240, 240, 1);
+  margin: 0;
+}
+.floating-actions {
+  position: fixed;
+  right: 60px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.circle-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle-btn.blue {
+  background: #0d6efd;
+}
+
+.circle-btn.red {
+  background: #dc3545;
+}
+
+.circle-btn img {
+  pointer-events: none;
+}
+

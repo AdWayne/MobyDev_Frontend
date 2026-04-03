@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <form class="container register-form">
+      <img src="./img/logo.svg" alt="logo" class="logo" />
+
+      <div class="box">
+        <p class="name">Имя</p>
+        <input class="name-input" type="text" placeholder="Введите имя" />
+      </div>
+
+      <div class="box">
+        <p class="email">Email</p>
+        <input class="email-input" type="email" placeholder="Введите email" />
+      </div>
+
+      <div class="box">
+        <p class="password">Пароль</p>
+        <input
+          class="password-input"
+          type="password"
+          placeholder="Введите пароль"
+        />
+      </div>
+
+      <button class="register-button">Зарегистрироваться</button>
+
+      <a href="/login.html" class="register">
+        Уже есть аккаунт?
+        <span>Войти</span>
+      </a>
+    </form>
+
+    <script src="script/register.js"></script>
+  </body>
+</html>

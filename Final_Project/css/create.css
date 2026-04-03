@@ -1,0 +1,89 @@
+.create-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.create-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 125%;
+}
+
+.create-label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.create-input,
+.create-select,
+.create-textarea {
+  height: auto;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  background: white;
+}
+
+.create-textarea {
+  height: 170px;
+  resize: none;
+}
+
+.file-box {
+  background: #cfcfcf;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.file-btn {
+  height: 42px;
+  background: #1677a9;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+}
+
+.file-text {
+  font-size: 13px;
+  color: #333;
+}
+
+#createInput {
+  display: none;
+}
+
+.file-box input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.create-button {
+  background: #1677a9;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 48px;
+}
+
+.create-input::placeholder {
+  color: #bdbdbd;
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Создание новости</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/create.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <a href="./index.html" class="header__logo">
+          <img src="./img/logo.svg" alt="Логотип" />
+        </a>
+
+        <nav class="header__nav">
+          <ol class="header__nav-list">
+            <li>
+              <a
+                href="./index.html"
+                class="header__nav-link header__nav-link--active"
+                aria-current="page"
+              >
+                Новости
+              </a>
+            </li>
+
+            <li>
+              <a href="./categories.html" class="header__nav-link">
+                Категории
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="header__auth">
+        <a href="./login.html" class="button button--blue">Войти</a>
+      </div>
+    </header>
+
+    <div class="create-container">
+      <h2 class="create-title">Создание новости</h2>
+
+      <label class="create-label">Название</label>
+      <input type="text" class="create-input" placeholder="Введите название" />
+
+      <label class="create-label">Категория</label>
+      <select class="create-select">
+        <option>Выберите категорию</option>
+        <option>Спорт</option>
+        <option>Политика</option>
+        <option>Технологии</option>
+      </select>
+
+      <label class="create-label">Обложка</label>
+      <div class="file-box">
+        <button class="file-btn">Выбрать файл</button>
+        <span class="file-text">Не выбран файл</span>
+        <input type="file" id="fileInput" />
+      </div>
+
+      <label class="create-label">Контент</label>
+      <textarea class="create-textarea"></textarea>
+
+      <button class="create-button">Добавить новость</button>
+    </div>
+
+    <script src="create.js"></script>
+  </body>
+</html>
