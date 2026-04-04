@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Создание категориев</title>
+    <link rel="stylesheet" href="css/categories.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <a href="./index.html" class="header__logo">
+          <img src="./img/logo.svg" alt="Логотип" />
+        </a>
+
+        <nav class="header__nav">
+          <ol class="header__nav-list">
+            <li>
+              <a
+                href="./index.html"
+                class="header__nav-link header__nav-link--active"
+                aria-current="page"
+              >
+                Новости
+              </a>
+            </li>
+
+            <li>
+              <a href="./categories.html" class="header__nav-link">
+                Категории
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="header__auth">
+        <a href="./login.html" class="button button--red">Войти</a>
+      </div>
+    </header>
+
+    <div class="form-container">
+      <h2>Создание категории</h2>
+        <label class="name-title">Название</label>
+      <input type="text" class="name-input" placeholder="Введите название" />
+      <button class="save-btn">Добавить категорию</button>
+    </div>
+
+    <script src="script/create-category.js"></script>
+  </body>
+</html>

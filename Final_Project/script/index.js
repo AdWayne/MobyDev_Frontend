@@ -1,5 +1,35 @@
 const BASE_URL = "https://virtserver.swaggerhub.com/mobydev-a27/News/1.0.0";
 
+async function deleteNews(id) {
+  const authToken = localStorage.getItem("authToken");
+
+  if (!authToken) {
+    alert("Авторизуйтесь для удаления!");
+    return;
+  }
+
+  const isConfirmed = confirm("Вы уверены что хотите удалить данную новость?");
+  if(!isConfirmed) return;
+
+  try {
+    const response = await fetch(`${BASE_URL}/news/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer $(authToken)`
+      }
+    });
+
+    if (response.ok) {
+      alert("Новость успешно удалена.");
+      fetchAndRenderNews();
+    } else {
+      alert('Ошибка при удаления новости')
+    }
+  } catch (error) {
+    console.error('Ошибка', error)
+  }
+}
+
 async function fetchNews() {
   const cached = localStorage.getItem("news");
 
@@ -41,7 +71,7 @@ async function fetchAndRenderNews() {
                         <div class="news-card__author">
                             <div class="user">
                                 <div class="user__avatar">
-                                    <img src="https://i.pravatar.cc/150">
+                                    <img src="https://i.pravatar.cc/150?u=admin@admin.com">
                                 </div>
                                 <p class="user__name">
                                     ${news.author || "Администратор"}

@@ -1,0 +1,113 @@
+.categories-container {
+  padding: 32px;
+}
+
+.categories-list {
+  margin-top: 20px;
+}
+
+div button:first-child {
+  background-color: rgba(0, 119, 182, 1);
+  width: auto;
+  height: auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+div button:nth-child(2) {
+  background-color: rgba(193, 18, 31, 1);
+  width: auto;
+  height: auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.category-actions button {
+  margin-left: 10px;
+}
+
+.button-blue {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.button-red {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.name-title {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.form-container {
+  padding: 0 190px;
+  width: auto;
+}
+
+input {
+  display: block;
+  margin: 15px 0;
+  padding: 8px;
+  height: auto;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  background: white;
+}
+
+.input::placeholder {
+  color: #bdbdbd;
+}
+
+.save-btn {
+  background: #1677a9;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 48px;
+}
