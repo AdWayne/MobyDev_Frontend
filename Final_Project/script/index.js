@@ -1,135 +1,108 @@
-const BASE_URL = "https://virtserver.swaggerhub.com/mobydev-a27/News/1.0.0";
-
-async function deleteNews(id) {
-  const authToken = localStorage.getItem("authToken");
-
-  if (!authToken) {
-    alert("Авторизуйтесь для удаления!");
-    return;
-  }
-
-  const isConfirmed = confirm("Вы уверены что хотите удалить данную новость?");
-  if(!isConfirmed) return;
-
-  try {
-    const response = await fetch(`${BASE_URL}/news/${id}`, {
-      method: 'DELETE',
-      headers: {
-        'Authorization': `Bearer $(authToken)`
-      }
-    });
-
-    if (response.ok) {
-      alert("Новость успешно удалена.");
-      fetchAndRenderNews();
-    } else {
-      alert('Ошибка при удаления новости')
-    }
-  } catch (error) {
-    console.error('Ошибка', error)
-  }
-}
-
-async function fetchNews() {
-  const cached = localStorage.getItem("news");
-
-  if (cached) {
-    renderNews(JSON.parse(cached));
-  }
-
-  const response = await fetch(`${BASE_URL}/news`);
-  const data = await response.json();
-
-  localStorage.setItem("news", JSON.stringify(data));
-  renderNews(data);
-}
+const BASE_URL = "https://webfinalapi.mobydev.kz";
 
 async function fetchAndRenderNews() {
   try {
     const response = await fetch(`${BASE_URL}/news`);
-    const newsArray = await response.json();
+    if (!response.ok) throw new Error(`Ошибка HTTP: ${response.status}`);
 
+    const newsArray = await response.json();
+    
     document.querySelector(".news-grid").innerHTML = newsArray
       .map(
         (news) => `
-                <article class="news-card">
-                    <div class="news-card__image">
-                        <img src="${news.image}" alt="${news.title}">
-                    </div>
+          <article class="news-card">
+            <div class="news-card__image">
+              <img
+                src="${BASE_URL}${news.thumbnail.startsWith('/') ? '' : '/'}${news.thumbnail}"
+                alt="${news.title}" 
+              />
+            </div>
 
-                    <div class="news-card__content">
-                        <a class="news-card__link" href="./news.html?id=${news.id}">
-                            <h2 class="news-card__title">
-                                ${news.title}
-                            </h2>
+            <div class="news-card__content">
+              <a class="news-card__link" href="./news.html?id=${news.id}">
+                <h2 class="news-card__title">${news.title}</h2>
+                <p class="news-card__attributes">${news.createdAt} • ${news.category?.name || "Категория"}</p>
+              </a>
 
-                            <p class="news-card__attributes">
-                                ${news.createdAt} • ${news.category?.name || ""}
-                            </p>
-                        </a>
+              <div class="news-card__author">
+                <div class="user">
+                  <div class="user__avatar">
+                    <img 
+                      src="https://i.pravatar.cc/150?u=admin@admin.com"
+                      alt="Аватар"
+                    />
+                  </div>
+                  <p class="user__name">${news.author?.name || 'Неизвестный автор'}</p>
+                </div>
+              </div>
 
-                        <div class="news-card__author">
-                            <div class="user">
-                                <div class="user__avatar">
-                                    <img src="https://i.pravatar.cc/150?u=admin@admin.com">
-                                </div>
-                                <p class="user__name">
-                                    ${news.author || "Администратор"}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="news-card__actions">
-                            <a href="./edit-news.html?id=${news.id}"
-                               class="button button--blue button--small">
-                                Редактировать
-                            </a>
-
-                            <button
-                                class="button button--red button--small"
-                                onclick="deleteNews(${news.id})">
-                                Удалить
-                            </button>
-                        </div>
-                    </div>
-                </article>
-            `,
+              <div class="news-card__actions">
+                <a
+                  href="./edit-news.html?id=${news.id}"
+                  class="button button--blue button--small"
+                >
+                  Редактировать
+                </a>
+                <button
+                  type="button"
+                  class="button button--red button--small btn-delete"
+                  data-id="${news.id}"
+                >
+                  Удалить
+                </button>
+              </div>
+            </div>
+          </article>
+        `
       )
       .join("");
 
-    setupAuthUI();
+    setupActionButtons();
   } catch (error) {
-    console.error(error);
+    console.error("Ошибка при получении новостей:", error);
   }
 }
 
-function setupAuthUI() {
-  const token = localStorage.getItem("authToken");
+function setupActionButtons() {
+  const authToken = localStorage.getItem("authToken");
   const headerAuth = document.querySelector(".header__auth");
 
-  if (token) {
-    headerAuth.innerHTML = `
-            <div class="header-user">
-                <div class="header-user__container">
-                <div class="header-user__avatar">A</div>
-                <span class="header-user__name">Администратор</span>
-                </div>
-                <button class="button button--red" onclick="logout()">
-                    Выйти
-                </button>
-            </div>
-        `;
+  if (authToken && headerAuth) {
+    headerAuth.innerHTML = `<button class="button button--red" onclick="logout()">Выйти</button>`;
+  }
 
-    const createBtn = document.createElement("button");
+  document.querySelectorAll(".news-card__actions a.button--blue").forEach(link => {
+    link.addEventListener("click", (event) => {
+      if (!authToken) {
+        event.preventDefault();
+        alert("Авторизуйтесь для редактирования.");
+      }
+    });
+  });
 
-    createBtn.className = "create-news-btn";
-    createBtn.innerHTML = "+";
+  document.querySelectorAll(".btn-delete").forEach(button => {
+    button.addEventListener("click", () => {
+      if (!authToken) {
+        return alert("Авторизуйтесь для удаления.");
+      }
+      const newsId = button.getAttribute("data-id");
+      if (confirm("Вы уверены, что хотите удалить эту новость?")) {
+        deleteNews(newsId);
+      }
+    });
+  });
+}
 
-    createBtn.onclick = () => {
-      window.location.href = "./create.html";
-    };
-
-    document.body.appendChild(createBtn);
+function displayCreateButton() {
+  if (localStorage.getItem("authToken")) {
+    const grid = document.querySelector('.news-grid');
+    if (grid && !document.querySelector('.button--green')) {
+        const createButton = document.createElement("button");
+        createButton.className = "button button--green";
+        createButton.textContent = "+";
+        createButton.onclick = () => (window.location.href = "./create.html");
+        grid.before(createButton);
+    }
   }
 }
 
@@ -138,6 +111,24 @@ function logout() {
   window.location.href = "./login.html";
 }
 
+async function deleteNews(id) {
+  const authToken = localStorage.getItem("authToken")
+    try {
+        const response = await fetch(`${BASE_URL}/news/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem("authToken")}`
+            }
+        });
+        if (response.ok) {
+            fetchAndRenderNews();
+        }
+    } catch (error) {
+        console.error("Ошибка при удалении:", error);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   fetchAndRenderNews();
+  displayCreateButton();
 });

@@ -1,17 +1,17 @@
-const BASE_URL = "https://virtserver.swaggerhub.com/mobydev-a27/News/1.0.0";
+const BASE_URL = "https://webfinalapi.mobydev.kz";
 
 document
-  .querySelector(".container")
-  .addEventListener("submit", async (event) => {
+  .querySelector('.container')
+  .addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const email = document.querySelector(".email-input").value;
     const password = document.querySelector(".password-input").value;
 
     try {
-      const response = await fetch(`${BASE_URL}/auth/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch(`${BASE_URL}/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
 
@@ -26,5 +26,5 @@ document
       console.error("Ошибка при авторизации:", error);
     }
   });
-//admin@mail.com
-//123456
+//test@gmail.com
+//string1B

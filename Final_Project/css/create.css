@@ -17,9 +17,9 @@
   margin-bottom: 6px;
 }
 
-.create-input,
-.create-select,
-.create-textarea {
+.name-input,
+.category-input,
+.content-input {
   height: auto;
   width: 100%;
   padding: 12px;
@@ -30,7 +30,7 @@
   background: white;
 }
 
-.create-textarea {
+.content-input {
   height: 170px;
   resize: none;
 }

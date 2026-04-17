@@ -1,4 +1,4 @@
-const BASE_URL = "https://virtserver.swaggerhub.com/mobydev-a27/News/1.0.0";
+const BASE_URL = "https://webfinalapi.mobydev.kz";
 
 function setupAuthUI() {
   const token = localStorage.getItem("authToken");

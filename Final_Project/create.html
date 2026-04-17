@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/create.css">
+    <link rel="stylesheet" href="css/create.css" />
   </head>
   <body>
     <header class="header">
@@ -50,25 +50,25 @@
       <h2 class="create-title">Создание новости</h2>
 
       <label class="create-label">Название</label>
-      <input type="text" class="create-input" placeholder="Введите название" />
+      <input type="text" class="name-input" placeholder="Введите название" />
 
       <label class="create-label">Категория</label>
-      <select class="create-select">
-        <option>Выберите категорию</option>
-        <option>Спорт</option>
-        <option>Политика</option>
-        <option>Технологии</option>
+      <select class="category-input" name="category" id="category">
+        <option disabled selected>Выберите категорию</option>
+        <option value="1">Спорт</option>
+        <option value="2">Политика</option>
+        <option value="3">Технологии</option>
       </select>
 
       <label class="create-label">Обложка</label>
       <div class="file-box">
         <button class="file-btn">Выбрать файл</button>
         <span class="file-text">Не выбран файл</span>
-        <input type="file" id="fileInput" />
+        <input type="file" class="cover-input" id="cover-input" />
       </div>
 
       <label class="create-label">Контент</label>
-      <textarea class="create-textarea"></textarea>
+      <textarea class="content-input"></textarea>
 
       <button class="create-button">Добавить новость</button>
     </div>

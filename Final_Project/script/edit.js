@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const authToken = localStorage.getItem("authToken");
   const headerAuth = document.querySelector(".header__auth");
 
-  if (authToken) {
+  if (authToken && headerAuth) {
     headerAuth.innerHTML = `
       <button class="button button--red" onclick="logout()">
         Выйти
@@ -15,67 +15,63 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (newsId) {
     try {
-      const response = await fetch(
-        `https://virtserver.swaggerhub.com/mobydev-a27/News/1.0.0/news/${newsId}`
-      );
+      const response = await fetch(`https://webfinalapi.mobydev.kz/news/${newsId}`);
+      if (response.ok) {
+        const newsData = await response.json();
 
-      const newsData = await response.json();
-
-      document.querySelector(".create-input").value = newsData.title;
-      document.querySelector(".create-textarea").value = newsData.content;
-      document.querySelector(".create-select").value = newsData.category?.id;
-
+        document.querySelector(".name-input").value = newsData.title || "";
+        document.querySelector(".content-input").value = newsData.content || "";
+        document.querySelector(".category-input").value = newsData.categoryId || "";
+      } else {
+        console.error("Ошибка при получении данных");
+      }
     } catch (error) {
-      console.error("Ошибка:", error);
+      console.error("Ошибка запроса:", error);
     }
   }
 
-  document
-    .querySelector(".create-button")
-    .addEventListener("click", async (event) => {
-      event.preventDefault();
 
-      const title = document.querySelector(".create-input").value;
-      const content = document.querySelector(".create-textarea").value;
-      const categoryId = document.querySelector(".create-select").value;
+document
+  .querySelector('.create-button')
+  .addEventListener('click', async (event) => {
+    event.preventDefault();
 
-      if (!title || !content || !categoryId) {
-        alert("Заполни все поля");
-        return;
+    const title = document.querySelector(".name-input").value;
+    const content = document.querySelector(".content-input").value;
+    const categoryId = document.querySelector(".category-input").value;
+    const thumbnail = document.querySelector(".cover-input").files[0];
+
+    if (!title || !content || !categoryId || !thumbnail) {
+      alert("Пожалуйста, заполните все поля");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("content", content);
+    formData.append("categoryId", categoryId);
+    formData.append("thumbnail", thumbnail);
+
+    try {
+      const response = await fetch(`https://webfinalapi.mobydev.kz/news/${newsId}`, {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("Новость успешно обновлена!");
+        window.location.href = "./index.html";
+      } else {
+        const errorResponse = await response.json();
+        alert("Ошибка при добавлении новости!" + (errorResponse.message || 'Проверьте данные.'));
       }
-
-      const data = {
-        title,
-        content,
-        createdAt: new Date().toISOString().split("T")[0],
-        author: "Администратор",
-        categoryId: Number(categoryId),
-        image: "https://i.pravatar.cc/300"
-      };
-
-      try {
-        const response = await fetch(
-          `https://virtserver.swaggerhub.com/mobydev-a27/News/1.0.0/news/${newsId}`,
-          {
-            method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${authToken}`,
-            },
-            body: JSON.stringify(data),
-          }
-        );
-
-        if (response.ok) {
-          alert("Новость обновлена!");
-          window.location.href = "./index.html";
-        } else {
-          alert("Ошибка обновления");
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    });
+    } catch (error) {
+      console.error("Ошибка:", error);
+    }
+  });
 });
 
 function logout() {
