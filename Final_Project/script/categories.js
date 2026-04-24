@@ -18,7 +18,7 @@ function setupAuthUI() {
     const createBtn = document.createElement("button");
     createBtn.className = "create-news-btn";
     createBtn.innerHTML = "+";
-    createBtn.onclick = () => window.location.href = "./create-category.html";
+    createBtn.onclick = () => (window.location.href = "./create-category.html");
     document.body.appendChild(createBtn);
   }
 }
@@ -41,7 +41,9 @@ async function fetchCategories() {
 
 function renderCategories(categories) {
   const list = document.querySelector(".categories-list");
-  list.innerHTML = categories.map(c => `
+  list.innerHTML = categories
+    .map(
+      (c) => `
     <div class="category-item">
       <span>${c.name}</span>
       <div>
@@ -49,7 +51,9 @@ function renderCategories(categories) {
         <button onclick="deleteCategory(${c.id})">Удалить</button>
       </div>
     </div>
-  `).join("");
+  `,
+    )
+    .join("");
 }
 
 function editCategory(id) {
@@ -57,13 +61,37 @@ function editCategory(id) {
 }
 
 async function deleteCategory(id) {
+  const token = localStorage.getItem("authToken");
+  if (!token) {
+    alert("Ошибка: вы не авторизованы!");
+    return;
+  }
+
+  if (!confirm("Вы уверены, что хотите удалить эту категорию?")) {
+    return;
+  }
+
   try {
-    const response = await fetch(`${BASE_URL}/category/${id}`, { method: "DELETE" });
-    if (!response.ok) throw new Error("Ошибка при удалении");
-    alert("Удалено");
-    fetchCategories();
+    const response = await fetch(`${BASE_URL}/category/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      alert("Категория успешно удалена");
+      fetchCategories();
+    } else {
+      const errorData = await response.json().catch(() => ({}));
+      alert(
+        `Ошибка: ${errorData.message || "Недостаточно прав или категория не пуста"}`,
+      );
+    }
   } catch (error) {
-    console.error(error);
+    console.error("Ошибка сети:", error);
+    alert("Произошла ошибка при соединении с сервером");
   }
 }
 
