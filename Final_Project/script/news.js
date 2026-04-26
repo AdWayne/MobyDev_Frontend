@@ -69,8 +69,8 @@ async function fetchAndRenderNewsById(newsId) {
 
     const token = localStorage.getItem("authToken");
     const actionsBlock = document.querySelector(".floating-actions");
-    const deleteBtn = document.querySelector(".circle-btn.blue");
-    const editBtn = document.querySelector(".circle-btn.red");
+    const deleteBtn = document.querySelector(".circle-btn.red");
+    const editBtn = document.querySelector(".circle-btn.blue");
 
     if (token) {
       deleteBtn.onclick = () => deleteNews(newsId);
